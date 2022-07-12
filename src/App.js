@@ -77,10 +77,10 @@ function App() {
           <tbody>
             {usuarios &&
               usuarios.map((usuario) => (
-                <tr key={usuario.id}>
-                  <td>{usuarios.idalias}</td>
-                  <td>{usuarios.mail}</td>
-                  <td>{usuarios.idalias}</td>
+                <tr key={usuario.idalias}>
+                  <td>{usuario.idalias}</td>
+                  <td>{usuario.idalias}</td>
+                  <td>{usuario.mail}</td>
                 </tr>
               ))}
           </tbody>
