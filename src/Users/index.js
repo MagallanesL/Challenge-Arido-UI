@@ -77,7 +77,7 @@ function Peticiones() {
       </div>
 
       <div className="table-responsive">
-        <table className="table table-sm table-bordered">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Alias</th>
