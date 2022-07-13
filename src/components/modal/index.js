@@ -9,9 +9,11 @@ export default function Example() {
 
   return (
     <>
-      <Button variant="success" onClick={handleShow}>
-        Nuevo
-      </Button>
+      <div className="button" align="center">
+        <Button variant="success" onClick={handleShow}>
+          Nuevo
+        </Button>
+      </div>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
