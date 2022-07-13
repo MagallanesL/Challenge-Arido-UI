@@ -46,7 +46,7 @@ function Peticiones() {
           .toString()
           .toLowerCase()
           .includes(terminoBusqueda.toLowerCase()) ||
-        elemento.company.name
+        elemento.usuario.name
           .toString()
           .toLowerCase()
           .includes(terminoBusqueda.toLowerCase())
