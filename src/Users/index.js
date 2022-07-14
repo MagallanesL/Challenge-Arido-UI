@@ -83,6 +83,7 @@ function Peticiones() {
               <th>Alias</th>
               <th>Nombre</th>
               <th>Correo</th>
+              <th>Detalles</th>
             </tr>
           </thead>
 
