@@ -22,18 +22,6 @@ function Peticiones() {
       });
   };
 
-  const registroPost = async () => {
-    await axios
-      .post("http://localhost:3000/api/users", this.state.form)
-      .then((response) => {
-        this.modalInsertar();
-        this.peticionGet();
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  };
-
   const handleChange = (e) => {
     setBusqueda(e.target.value);
     filter(e.target.value);
@@ -59,7 +47,6 @@ function Peticiones() {
 
   useEffect(() => {
     peticionGet();
-    registroPost();
   }, []);
 
   return (

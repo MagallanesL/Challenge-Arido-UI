@@ -1,11 +1,25 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
+import axios from "axios";
 
 export default function Example() {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const [Alias, setAlias] = useState("");
+  const [nombre, setNombre] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [password, setPassword] = useState("");
+
+  const agregarUsuario = async () => {
+    await axios.post("http://localhost:3000/api/users", {
+      idalias: Alias,
+      nombre: nombre,
+      correo: correo,
+      Password: password,
+    });
+  };
 
   return (
     <>
@@ -27,6 +41,7 @@ export default function Example() {
                 type="email"
                 placeholder="Por ejemplo: Roblox"
                 autoFocus
+                onChange={(e) => setAlias(e.target.value)}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -35,6 +50,7 @@ export default function Example() {
                 type="Texto"
                 placeholder="Lisandro Magallanes"
                 autoFocus
+                onChange={(e) => setNombre(e.target.value)}
               />
             </Form.Group>
 
@@ -44,11 +60,17 @@ export default function Example() {
                 type="email"
                 placeholder="name@example.com"
                 autoFocus
+                onChange={(e) => setCorreo(e.target.value)}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Contraseña</Form.Label>
-              <Form.Control type="password" placeholder="" autoFocus />
+              <Form.Control
+                type="password"
+                placeholder=""
+                autoFocus
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </Form.Group>
           </Form>
         </Modal.Body>
