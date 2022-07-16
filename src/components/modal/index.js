@@ -16,9 +16,10 @@ export default function Example() {
     await axios.post("http://localhost:3000/api/users", {
       idalias: Alias,
       nombre: nombre,
-      correo: correo,
+      mail: correo,
       Password: password,
     });
+    handleClose();
   };
 
   return (
@@ -78,7 +79,7 @@ export default function Example() {
           <Button variant="secondary" onClick={handleClose}>
             Cancerlar
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={(e) => agregarUsuario(e)}>
             Registrar
           </Button>
         </Modal.Footer>
