@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Challenge Arido
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Realizado con React en su version 18, bootstrap 5 y Axios.
+
 
 ## Available Scripts
 
